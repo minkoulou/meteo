@@ -45,7 +45,11 @@ async function getWeather() {
             document.body.style.backgroundPosition = 'cneter'
             document.body.style.backgroundAttachmen = 'fixed';
             document.body.style.backgroundRepeat = 'no-repeat'
-        }
+        }else if(data.weather[0].description === "légère pluie"){
+              document.body.style.backgroundImage = 'url("../image/pluie.jpeg")'
+            document.body.style.backgroundPosition = 'cneter'
+            document.body.style.backgroundAttachmen = 'fixed';
+            document.body.style.backgroundRepeat = 'no-repeat'}
 
         // affichage correct avec labels
         document.getElementById("humidity").innerHTML = data.main.humidity + "%";
